@@ -1,6 +1,5 @@
 
-Introduction
-================================
+## Introduction
 
 webslides2pdf is a tool to convert web pages into pdf files.
 
@@ -19,11 +18,11 @@ However there are some downsides:
 + Some web pages react badly to certain page dimensions you can try using the size parameter (see bellow)
 + While the result is a pdf, these wont be high quality vector drawings - they are bitmaps embedded in a pdf
 
-Usage
-================================
+## Usage
 
 Just call
-$ ./webslides2pdf <location> <num_pages>
+    
+    $ ./webslides2pdf <location> <num_pages>
 
 Where locations is either a local file path or URL of a presentation,
 and num_pages is the number of slides.
@@ -31,20 +30,20 @@ and num_pages is the number of slides.
 There is an optional third argument, to specify the size in pixels of the
 slides. For example, this command
 
-$ ./webslides2pdf file.html 10 1920x1080
+    $ ./webslides2pdf file.html 10 1920x1080
+
 
 would generate a pdf with 10 pages and size 1920x1080 pixels
 from the file.html file.
 
 
-Compiling
-=================================
+## Compiling
 
 The only requirement is Qt along with its development tools,
 running:
 
-$ qmake
-$ make 
+    $ qmake
+    $ make 
 
 should build the webslides2pdf binary.
 

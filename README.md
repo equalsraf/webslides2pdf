@@ -7,8 +7,8 @@ Its behaviour can be described as follows:
 
 > Imagine you open a browser, take a screenshot, and press page-down
 > and take another screenshot, and so on.
-> You them grab your all screenshots and generate a pdf where each
-> on is a single page.
+> You them grab all screenshots and generate a pdf where each
+> one is a single page.
 > That's what this application does for you.
 
 I did this to be able generate pdf files from web based presentations.

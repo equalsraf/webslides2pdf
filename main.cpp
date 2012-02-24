@@ -15,10 +15,13 @@ int main(int argc, char *argv[])
 
 	QUrl url(file);
 	if ( url.scheme().isEmpty() ) {
-		url = QUrl::fromLocalFile(QDir::currentPath()).resolved(url);
+		// URL is relative path - create absolute URL
+		QUrl cwd = QUrl::fromLocalFile( QDir::currentPath() );
+		cwd.setPath(cwd.path() + "/");
+		url = cwd.resolved(url);
 	}
 
-	if ( url.isLocalFile() && !QFileInfo(url.toLocalFile()).isFile() ) {
+	if ( url.scheme() == "file" && !QFileInfo(url.toLocalFile()).isFile() ) {
 		qDebug() << "Unable to open" << QApplication::arguments()[1];
 		return -1;
 	}

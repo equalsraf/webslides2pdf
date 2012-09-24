@@ -18,6 +18,7 @@ void WebSlidesApp::webviewFinishedLoading(bool ok)
 
 	if (!m_initialised) {
 		m_printer->setResolution(95);
+		m_printer->setColorMode(QPrinter::Color);
 		m_printer->setOutputFileName("html.pdf");
 		m_printer->setFullPage(true);
 		m_printer->setPageMargins(0,0,0,0, QPrinter::DevicePixel);
